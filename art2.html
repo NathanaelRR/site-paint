@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ennui et Art</title>
+  <style>
+      body {
+        background: #0e0e0e;
+        color: #f0f0f0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 2rem;
+        margin: 0;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        color: #facc15;
+        letter-spacing: 1px;
+      }
+
+      p {
+        max-width: 800px;
+        margin: 0 auto 3rem auto;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #ccc;
+      }
+
+      .comparison {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+        padding: 0 1rem;
+      }
+
+      .img-box {
+        background: #1a1a1a;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .img-box:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+      }
+
+      .img-box img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-bottom: 2px solid #333;
+      }
+
+      .label {
+        text-align: center;
+        font-weight: bold;
+        color: #facc15;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+      }
+
+      .img-box p {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #aaa;
+        margin-bottom: 1rem;
+      }
+
+      @media (max-width: 600px) {
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox-img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .lightbox .close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .lightbox .close:hover {
+      color: #facc15;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>QUAND TU T'ENNUIES MAIS QUE T'AS PAINT !</h2>
+  <p>
+    Faits par Nathanaël R-R sur le logiciel paint (tu l'as surement sur ton ordi). 
+    Je n'utilise que des figures géométriques. 
+    Bref, je trouve ça amusant !!
+  </p>
+
+  <!-- Comparaison 1 -->
+  <div class="comparison">
+
+    <div class="img-box">
+      <img src="image/city7.png" alt="Pixel Art 3">
+      <div class="label">City 6</div>
+      <p>11/04/2025 Nathanaël R-R</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/city6.png" alt="Pixel Art 3">
+      <div class="label">City 5</div>
+      <p>10/04/2025 Nathanaël R-R</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/syllabes.png" alt="Pixel Art 3">
+      <div class="label">Essai syllabes</div>
+      <p>09/04/2025 Nathanaël R-R</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/perso1.png" alt="Pixel Art 3">
+      <div class="label">Essai personnages</div>
+      <p>08/04/2025 Nathanaël R-R</p>
+    </div>    
+
+    <div class="img-box">
+      <img src="image/city5.png" alt="Made on Paint">
+      <div class="label">City 4</div>
+      <p>08/04/2025 Nathanaël R-R</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/city4.png" alt="Pixel Art 1">
+      <div class="label">City 3</div>
+      <p>08/04/2025 Nathanaël R-R</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/city2.png" alt="Pixel Art 3">
+      <div class="label">City 2</div>
+      <p>07/04/2025 Nathanaël R-R</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/city1.png" alt="Pixel Art 3">
+      <div class="label">La ville aquatique</div>
+      <p>06/04/2025 Nathanaël R-R</p>
+    </div>
+    
+    <div class="img-box">
+      <img src="image/N8.png" alt="Pixel Art 3">
+      <div class="label">synthèse - collage</div>
+      <p>12/11/2024 Nathanaël R-R</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/N7.png" alt="Pixel Art 3">
+      <div class="label">Essai perso 3</div>
+      <p>29/02/2024 Nathanaël R-R</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/N6.png" alt="Pixel Art 3">
+      <div class="label">Essai perso 2</div>
+      <p>28/02/2024 Nathanaël R-R</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/N4.png" alt="Pixel Art 3">
+      <div class="label">Essai perso 1</div>
+      <p>26/02/2024 Nathanaël R-R</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/N2.png" alt="Pixel Art 3">
+      <div class="label">De la beauté dans l'incompris</div>
+      <p>25/02/2024 Nathanaël R-R</p>
+    </div>
+
+    <div class="img-box">
+      <img src="image/N1.png" alt="Pixel Art 3">
+      <div class="label">Abstrait et chaotique</div>
+      <p>25/02/2024 Nathanaël R-R</p>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-img" src="" alt="Agrandissement">
+    </div>
+
+  </div>
+
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.querySelector(".lightbox-img");
+    const closeBtn = document.querySelector(".close");
+  
+    document.querySelectorAll(".img-box img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+  
+    closeBtn.addEventListener("click", () => {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+    });
+  
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+      }
+    });
+  </script>
+  
+</body>
+</html>
